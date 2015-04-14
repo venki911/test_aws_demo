@@ -1,2 +1,4 @@
-<h1>Uploads#index</h1>
-<p>Find me in app/views/uploads/index.html.erb</p>
+<%= form_tag uploads_path, enctype: 'multipart/form-data' do %>
+    <%= file_field_tag :file  %>
+    <%= submit_tag 'Upload file' %>
+<% end %>
