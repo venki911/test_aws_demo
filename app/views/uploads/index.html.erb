@@ -1,4 +1,5 @@
-<%= form_tag uploads_path, enctype: 'multipart/form-data' do %>
-    <%= file_field_tag :file  %>
-    <%= submit_tag 'Upload file' %>
+<h1>All uploads</h1>
+<% @uploads.each do |upload| %>
+    <div>
+    <img src="<%= upload.url %>" alt="">
 <% end %>
